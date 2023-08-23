@@ -1,0 +1,76 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply padding and center content */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Style for header */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+}
+
+/* Style for navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style for intro */
+.intro {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Style for section titles */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style for project cards */
+.project-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Style for contact form */
+.contact-form {
+    text-align: center;
+}
+
+/* Style for contact info */
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style for footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+}

@@ -1,76 +1,145 @@
-/* Reset default margin and padding for all elements */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Apply padding and center content */
-body {
+/* Create a container for centering the content */
+.container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 50px;
+    min-height: 100vh;
 }
 
-/* Style for header */
-header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #f0f0f0;
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
 }
 
-/* Style for navigation */
+/* Set a background gradient */
+body {
+    background: linear-gradient(to bottom, #3498db, #e74c3c);
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Style the navigation */
+nav {
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top */
+    left: 0; /* Stick to the left */
+    width: 100%; /* Full width */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem; /* Increase padding to increase the size of the navigation bar */
+    z-index: 999; /* Ensure the navigation is above other elements */
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: center; /* Center-align the navigation items */
 }
 
-nav a {
+nav ul li {
+    margin-right: 2rem; /* Increase margin to adjust spacing between navigation items */
+    transition: filter 0.3s ease; /* Add transition for the filter property */
+    font-weight: bold; /* Apply bold font weight to navigation items */
+}
+
+nav ul:hover li {
+    filter: blur(4px); /* Apply blur to all navigation items on hover */
+}
+
+nav ul li:hover {
+    filter: none; /* Remove blur effect from the hovered item */
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
 }
 
-/* Style for intro */
+/* Change link color to light greenish blue */
+nav ul li a:hover {
+    color: #40c9a2;
+}
+
+/* Style the header */
 .intro {
-    margin-top: 40px;
     text-align: center;
+    padding: 10rem 0 3rem; /* Adjust padding to move "Design Scope" and tiles down */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Style for section titles */
+.intro h1 {
+    font-size: 2rem; /* Adjust font size for smaller "Design Scope" text */
+    color: #fff; /* Change color of "Design Scope" text to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow to the text */
+    font-family: "YourDesiredFont", sans-serif; /* Replace with your desired font */
+}
+
+/* Style the sections */
 .section-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Adjust font size for smaller section titles */
+    padding: 1rem 2rem; /* Adjust padding to move section titles closer to section items */
+    text-align: center;
+    margin-bottom: 2rem; /* Reduce margin-bottom for closer spacing */
+    font-weight: bold; /* Apply bold font weight to section titles */
 }
 
-/* Style for project cards */
-.project-card {
-    border: 1px solid #ccc;
-    padding: 20px;
+.about-text, .project-card, .contact-form, .contact-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem; /* Adjust margin-bottom to bring it closer to the section */
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+}
+
+/* Style the contact form */
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 50%; /* Reduce width to half of the container */
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
-/* Style for contact form */
-.contact-form {
-    text-align: center;
+.contact-form button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
 }
 
-/* Style for contact info */
-.contact-info {
-    text-align: center;
-    margin-top: 20px;
+/* Add extra spacing between sections */
+.about-text {
+    margin-bottom: 3rem; /* Adjust the margin as needed */
 }
 
-/* Style for footer */
+.project-card {
+    margin-bottom: 5rem; /* Adjust the margin as needed */
+}
+
+/* Style the footer */
 footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
     text-align: center;
-    margin-top: 40px;
-    padding: 10px 0;
-    background-color: #f0f0f0;
 }

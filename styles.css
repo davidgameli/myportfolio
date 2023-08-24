@@ -70,9 +70,9 @@ nav ul li a:hover {
 /* Style the image */
 .passport-photo {
     width: 300px; /* Adjust the width to your preference */
-    height: 200px; /* Adjust the height to match the width */
+    height: 300px; /* Adjust the height to match the width */
     object-fit: cover; /* Maintain aspect ratio and cover the container */
-    border-radius: 50%; /* Create a circular appearance */
+    border-radius: 60%; /* Create a circular appearance */
 }
 
 /* Center-align image and text within .intro */

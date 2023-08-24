@@ -69,10 +69,21 @@ nav ul li a:hover {
 
 /* Style the image */
 .passport-photo {
-    width: 300px; /* Adjust the width to your preference */
-    height: 649px; /* Adjust the height to match the width */
+    width: 300px; /* Adjust the width to 300px */
+    height: 647px; /* Adjust the height to 647px */
     object-fit: cover; /* Maintain aspect ratio and cover the container */
-    border-radius: 50%; /* Create a circular appearance */
+    border-radius: 15px; /* Create rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
+}
+
+/* Center-align image and text within .intro */
+.intro {
+    display: flex;
+    align-items: center;
+}
+
+.intro-text {
+    margin-left: 20px; /* Add space between image and text */
 }
 
 /* Center-align image and text within .intro */

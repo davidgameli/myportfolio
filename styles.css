@@ -61,6 +61,17 @@ nav ul li a:hover {
     color: #40c9a2;
 }
 
+/* Additional styles for image alignment */
+.intro {
+    display: flex;
+    align-items: flex-start;
+}
+
+.intro img {
+    max-width: 30%; /* Adjust the image width as needed */
+    height: 40%;
+}
+
 /* Style the header */
 .intro {
     text-align: center;

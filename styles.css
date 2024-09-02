@@ -44,7 +44,7 @@ nav ul li {
 }
 
 nav ul:hover li {
-    filter: blur(4px); /* Apply blur to all navigation items on hover */
+    filter: blur(2.5px); /* Apply blur to all navigation items on hover */
 }
 
 nav ul li:hover {

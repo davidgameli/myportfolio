@@ -44,7 +44,7 @@ nav ul li {
 }
 
 nav ul:hover li {
-    filter: blur(2.5px); /* Apply blur to all navigation items on hover */
+    filter: blur(2px); /* Apply blur to all navigation items on hover */
 }
 
 nav ul li:hover {
@@ -93,7 +93,7 @@ nav ul li a:hover {
 }
 
 .intro-text {
-    margin-left: 20px; /* Add space between image and text */
+    margin-left: 5px; /* Add space between image and text */
 }
 
 /* Center-align image and text within .intro */

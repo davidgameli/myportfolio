@@ -166,7 +166,7 @@ nav ul li a:hover {
 .contact-form button {
     background: #3498db;
     color: #fff;
-    border: none;
+    border: #fff;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;

@@ -43,10 +43,6 @@ nav ul li {
     font-weight: bold; /* Apply bold font weight to navigation items */
 }
 
-nav ul:hover li {
-    filter: blur(2px); /* Apply blur to all navigation items on hover */
-}
-
 nav ul li:hover {
     filter: none; /* Remove blur effect from the hovered item */
 }
@@ -56,57 +52,11 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Change link color to light greenish blue */
 nav ul li a:hover {
-    color: #4169E1;
+    color: #4169E1; /* Change link color to light greenish blue */
 }
 
 /* Additional styles for image alignment */
-.intro {
-    display: flex;
-    align-items: flex-start;
-}
-
-/* Style the image */
-.passport-photo {
-    width: 300px; /* Adjust the width to 300px */
-    height: 300px; /* Adjust the height to 647px */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    border-radius: 15px; /* Create rounded corners */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
-}
-
-/* Style for the additional image */
-.additional-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 2rem auto; /* Adjust margin as needed */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Add a shadow */
-}
-
-
-/* Center-align image and text within .intro */
-.intro {
-    display: flex;
-    align-items: center;
-}
-
-.intro-text {
-    margin-left: 5px; /* Add space between image and text */
-}
-
-/* Center-align image and text within .intro */
-.intro {
-    display: flex;
-    align-items: center;
-}
-
-.intro-text {
-    margin-left: 20px; /* Add space between image and text */
-}
-
-/* Style the header */
 .intro {
     text-align: center;
     padding: 10rem 0 3rem; /* Adjust padding to move "Design Scope" and tiles down */
@@ -115,20 +65,40 @@ nav ul li a:hover {
     align-items: center;
 }
 
+.passport-photo {
+    width: 300px; /* Adjust the width */
+    height: 300px; /* Set the intended height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 15px; /* Create rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
+}
+
+.additional-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 2rem auto; /* Adjust margin as needed */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+
+.intro-text {
+    margin-left: 20px; /* Add space between image and text */
+}
+
 .intro h1 {
-    font-size: 2rem; /* Adjust font size for smaller "Design Scope" text */
-    color: #fff; /* Change color of "Design Scope" text to white */
+    font-size: 2rem; /* Adjust font size */
+    color: #fff; /* Change color to white */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow to the text */
     font-family: "YourDesiredFont", sans-serif; /* Replace with your desired font */
 }
 
 /* Style the sections */
 .section-title {
-    font-size: 1.5rem; /* Adjust font size for smaller section titles */
-    padding: 1rem 2rem; /* Adjust padding to move section titles closer to section items */
+    font-size: 1.5rem; /* Adjust font size */
+    padding: 1rem 2rem; /* Adjust padding */
     text-align: center;
-    margin-bottom: 2rem; /* Reduce margin-bottom for closer spacing */
-    font-weight: bold; /* Apply bold font weight to section titles */
+    margin-bottom: 2rem; /* Reduce margin-bottom */
+    font-weight: bold; /* Apply bold font weight */
 }
 
 .about-text, .project-card, .contact-form, .contact-info {
@@ -139,7 +109,7 @@ nav ul li a:hover {
     flex-direction: column;
     width: 60%;
     margin: 0 auto;
-    margin-bottom: 1rem; /* Adjust margin-bottom to bring it closer to the section */
+    margin-bottom: 1rem; /* Adjust margin-bottom */
 }
 
 .project-card h3 {
@@ -155,7 +125,7 @@ nav ul li a:hover {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%; /* Reduce width to half of the container */
+    width: 100%; /* Full width */
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: none;
@@ -166,7 +136,7 @@ nav ul li a:hover {
 .contact-form button {
     background: #3498db;
     color: #fff;
-    border: #fff;
+    border: none; /* Remove border */
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
@@ -175,11 +145,11 @@ nav ul li a:hover {
 
 /* Add extra spacing between sections */
 .about-text {
-    margin-bottom: 2rem; /* Adjust the margin as needed */
+    margin-bottom: 2rem; /* Adjust the margin */
 }
 
 .project-card {
-    margin-bottom: 3rem; /* Adjust the margin as needed */
+    margin-bottom: 3rem; /* Adjust the margin */
 }
 
 /* Style the footer */

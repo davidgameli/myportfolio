@@ -1,12 +1,3 @@
-/* Create a container for centering the content */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
 /* Reset default margin and padding */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
@@ -18,6 +9,16 @@ body {
     background: linear-gradient(to bottom, #3498db, #e74c3c);
     font-family: Arial, sans-serif;
     color: #fff;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Create a container for centering the content */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Style the navigation */
@@ -27,7 +28,7 @@ nav {
     left: 0; /* Stick to the left */
     width: 100%; /* Full width */
     background: rgba(0, 0, 0, 0.7);
-    padding: 2rem; /* Increase padding to increase the size of the navigation bar */
+    padding: 1rem; /* Padding for navigation bar */
     z-index: 999; /* Ensure the navigation is above other elements */
 }
 
@@ -38,13 +39,13 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 2rem; /* Increase margin to adjust spacing between navigation items */
-    transition: filter 0.3s ease; /* Add transition for the filter property */
-    font-weight: bold; /* Apply bold font weight to navigation items */
+    margin-right: 2rem; /* Margin between navigation items */
+    transition: filter 0.3s ease; /* Transition for filter property */
+    font-weight: bold; /* Bold font weight */
 }
 
 nav ul li:hover {
-    filter: none; /* Remove blur effect from the hovered item */
+    filter: blur(2px); /* Blur effect on hover */
 }
 
 nav ul li a {
@@ -52,68 +53,56 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Change link color to light greenish blue */
 nav ul li a:hover {
-    color: #4169E1; /* Change link color to light greenish blue */
+    color: #4169E1;
 }
 
-/* Additional styles for image alignment */
+/* Style the header */
+header {
+    position: relative;
+    padding: 2rem 0; /* Adjust padding for header */
+}
+
+/* Style the introduction section */
 .intro {
     text-align: center;
-    padding: 10rem 0 3rem; /* Adjust padding to move "Design Scope" and tiles down */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 4rem 2rem; /* Padding for the intro section */
 }
 
 .passport-photo {
-    width: 300px; /* Adjust the width */
-    height: 300px; /* Set the intended height */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    border-radius: 15px; /* Create rounded corners */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
+    width: 100%; /* Ensure the image scales with container */
+    max-width: 300px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
 
-.additional-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 2rem auto; /* Adjust margin as needed */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Add a shadow */
-}
-
-.intro-text {
-    margin-left: 20px; /* Add space between image and text */
-}
-
-.intro h1 {
-    font-size: 2rem; /* Adjust font size */
-    color: #fff; /* Change color to white */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow to the text */
-    font-family: "YourDesiredFont", sans-serif; /* Replace with your desired font */
-}
-
-/* Style the sections */
-.section-title {
-    font-size: 1.5rem; /* Adjust font size */
-    padding: 1rem 2rem; /* Adjust padding */
-    text-align: center;
-    margin-bottom: 2rem; /* Reduce margin-bottom */
-    font-weight: bold; /* Apply bold font weight */
-}
-
-.about-text, .project-card, .contact-form, .contact-info {
+/* Style for responsive project cards */
+.project-card {
     background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 1rem; /* Adjust margin-bottom */
+    margin: 1rem auto; /* Center-align and space out project cards */
+    width: 90%; /* Full width on small screens */
+    max-width: 800px; /* Max width on larger screens */
 }
 
-.project-card h3 {
+/* Style images within project cards */
+.project-card img {
+    max-width: 100%; /* Ensure GIFs scale with their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove inline spacing issues */
+    margin: 1rem 0; /* Space around images */
+}
+
+/* Style for the section titles */
+.section-title {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 /* Style the contact form */
@@ -125,7 +114,7 @@ nav ul li a:hover {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%; /* Full width */
+    width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: none;
@@ -136,20 +125,11 @@ nav ul li a:hover {
 .contact-form button {
     background: #3498db;
     color: #fff;
-    border: none; /* Remove border */
+    border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
     align-self: flex-start;
-}
-
-/* Add extra spacing between sections */
-.about-text {
-    margin-bottom: 2rem; /* Adjust the margin */
-}
-
-.project-card {
-    margin-bottom: 3rem; /* Adjust the margin */
 }
 
 /* Style the footer */
@@ -157,4 +137,19 @@ footer {
     background: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     text-align: center;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .intro {
+        padding: 2rem 1rem; /* Reduce padding on smaller screens */
+    }
+    
+    .passport-photo {
+        max-width: 100%; /* Scale image on smaller screens */
+    }
+    
+    .project-card {
+        width: 95%; /* Full width with padding on small screens */
+    }
 }

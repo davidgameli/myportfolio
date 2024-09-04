@@ -137,7 +137,7 @@ nav ul li a:hover {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     margin-bottom: 1rem; /* Adjust margin-bottom to bring it closer to the section */
 }

@@ -12,40 +12,33 @@ body {
     line-height: 1.6; /* Improve readability */
 }
 
-/* Create a container for centering the content */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
 /* Style the navigation */
 nav {
-    position: fixed; /* Fixed position */
-    top: 0; /* Stick to the top */
-    left: 0; /* Stick to the left */
-    width: 100%; /* Full width */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: rgba(0, 0, 0, 0.7);
-    padding: 1rem; /* Padding for navigation bar */
-    z-index: 999; /* Ensure the navigation is above other elements */
+    padding: 1rem;
+    z-index: 999;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center-align the navigation items */
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin-right: 2rem; /* Margin between navigation items */
-    transition: filter 0.3s ease; /* Transition for filter property */
-    font-weight: bold; /* Bold font weight */
+    margin-right: 2rem;
+    transition: filter 0.3s ease;
+    font-weight: bold;
 }
 
 nav ul li:hover {
-    filter: blur(2px); /* Blur effect on hover */
+    filter: blur(2px);
 }
 
 nav ul li a {
@@ -53,29 +46,26 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Change link color to light greenish blue */
 nav ul li a:hover {
     color: #4169E1;
 }
 
-/* Style the header */
+/* Style the header and introduction section */
 header {
-    position: relative;
-    padding: 2rem 0; /* Adjust padding for header */
+    padding: 4rem 1rem 2rem; /* Adjust padding for header */
 }
 
-/* Style the introduction section */
 .intro {
     text-align: center;
-    padding: 4rem 2rem; /* Padding for the intro section */
+    padding: 2rem 1rem; /* Padding for intro section */
 }
 
 .passport-photo {
-    width: 100%; /* Ensure the image scales with container */
+    width: 100%;
     max-width: 300px; /* Max width for larger screens */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Style for responsive project cards */
@@ -88,7 +78,6 @@ header {
     max-width: 800px; /* Max width on larger screens */
 }
 
-/* Style images within project cards */
 .project-card img {
     max-width: 100%; /* Ensure GIFs scale with their container */
     height: auto; /* Maintain aspect ratio */
@@ -96,7 +85,7 @@ header {
     margin: 1rem 0; /* Space around images */
 }
 
-/* Style for the section titles */
+/* Style the section titles */
 .section-title {
     font-size: 1.5rem;
     padding: 1rem;
@@ -106,6 +95,15 @@ header {
 }
 
 /* Style the contact form */
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 90%; /* Full width on small screens */
+    max-width: 600px; /* Max width on larger screens */
+    margin: 1rem auto;
+}
+
 .contact-form label {
     display: block;
     margin-bottom: 0.5rem;

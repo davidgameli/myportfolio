@@ -3,329 +3,827 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Atsu Gameli | Portfolio</title>
+    <title>David Atsu Gameli - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="#home">David Atsu Gameli</a>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Header with Navigation -->
+    <header id="home">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info-top">
+                    <a href="mailto:davidgameli0@outlook.com"><i class="fas fa-envelope"></i> davidgameli0@outlook.com</a>
+                    <a href="tel:+233240095459"><i class="fas fa-phone"></i> +233 24 009 5459</a>
                 </div>
-                
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#portfolio" class="nav-link">Work</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                <div class="social-top">
+                    <a href="https://github.com/davidgameli" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/david-gameli" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/davidgameli" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav" id="mainNav">
+            <div class="container nav-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#home">
+                        <span class="logo-text">David Atsu Gameli</span>
+                        <span class="logo-subtext">Portfolio</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#portfolio" class="nav-link"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li class="nav-cta"><a href="#contact" class="btn hire-btn">Hire Me</a></li>
                 </ul>
-                
-                <button class="menu-toggle" aria-label="Toggle menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </span>
                 </button>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Hi, I'm David Atsu Gameli</h1>
-                    <p class="hero-subtitle">IT Professional & Web Developer</p>
-                    <p class="hero-description">Creating efficient, scalable technology solutions with focus on clean design and optimal performance.</p>
-                    <div class="hero-buttons">
-                        <a href="#portfolio" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">David Atsu Gameli</div>
+                <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav">
+                <li><a href="#home" class="mobile-nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="mobile-nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#portfolio" class="mobile-nav-link"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="tel:+233240095459" class="mobile-nav-link phone-link"><i class="fas fa-phone"></i> Call Now</a></li>
+                <li><a href="mailto:davidgameli0@outlook.com" class="mobile-nav-link email-link"><i class="fas fa-envelope"></i> Email Me</a></li>
+            </ul>
+            <div class="mobile-social">
+                <a href="https://github.com/davidgameli" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/david-gameli" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/davidgameli" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container">
+                <div class="intro">
+                    <img class="passport-photo" src="img.jpg" alt="David Atsu Gameli - IT Professional" loading="lazy">
+                    <div class="intro-text">
+                        <h1>Hi, I'm <span class="highlight">David Atsu Gameli</span></h1>
+                        <p class="tagline">IT Professional & Full-Stack Developer</p>
+                        <p class="intro-description">Specializing in system optimization, web development, and innovative technology solutions that drive business success. With expertise in frontend development, UI/UX design, and cybersecurity principles.</p>
+                        <div class="intro-buttons">
+                            <a href="#portfolio" class="btn primary-btn"><i class="fas fa-eye"></i> View My Work</a>
+                            <a href="#contact" class="btn secondary-btn"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+                            <a href="David_Atsu_Gameli_CV.pdf" class="btn outline-btn" download><i class="fas fa-download"></i> Download CV</a>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-image">
-                    <img src="profile.jpg" alt="David Atsu Gameli" class="profile-img">
                 </div>
             </div>
         </div>
-    </section>
-
+    </header>
+    
     <!-- About Section -->
-    <section id="about" class="section about">
+    <section id="about" class="section-padding">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
             <div class="about-content">
-                <p class="about-text">
-                    IT professional specializing in web development, system optimization, and innovative technology solutions. 
-                    Passionate about creating efficient, user-centered digital experiences that solve real-world problems.
-                </p>
-                
-                <div class="skills">
-                    <h3 class="skills-title">Core Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <h4>Web Development</h4>
-                            <p>HTML5, CSS3, JavaScript</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>UI/UX Design</h4>
-                            <p>Adobe XD, Responsive Design</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Technical Support</h4>
-                            <p>System Optimization, Troubleshooting</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Project Management</h4>
-                            <p>Git, Agile Methodologies</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section portfolio">
-        <div class="container">
-            <h2 class="section-title">Selected Work</h2>
-            
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project1.jpg" alt="Portfolio Website">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Portfolio Website</h3>
-                        <p class="project-description">Personal portfolio built with modern web technologies, featuring responsive design and clean aesthetics.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project2.jpg" alt="Church Website">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Church Website</h3>
-                        <p class="project-description">Complete website for Grace Temple Church with CMS integration and responsive design.</p>
-                        <div class="project-tags">
-                            <span class="tag">CMS</span>
-                            <span class="tag">Web Design</span>
-                        </div>
-                        <a href="https://gracetemple.cw.center" target="_blank" class="project-link">View Live</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project3.jpg" alt="Cybersecurity Quiz">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Cybersecurity Quiz</h3>
-                        <p class="project-description">Interactive quiz application to test cybersecurity knowledge with real-time feedback.</p>
-                        <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Quiz App</span>
-                        </div>
-                        <a href="https://davidgameli.github.io/cybersecure-quiz/" target="_blank" class="project-link">Try Quiz</a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">UI Prototyping</h3>
-                        <p class="project-description">Interactive prototypes and wireframes created with Adobe XD for various applications.</p>
-                        <div class="project-tags">
-                            <span class="tag">Adobe XD</span>
-                            <span class="tag">Prototyping</span>
-                        </div>
-                        <a href="https://xd.adobe.com/view/01ea1f96-8fad-452b-9647-8947b3f2def9-54b9/" target="_blank" class="project-link">View Prototype</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's work together</h3>
-                    <p>I'm currently available for freelance projects and full-time opportunities.</p>
+                <div class="about-text">
+                    <h3>DAVID ATSU GAMELI</h3>
+                    <p>Hello, I am David Atsu Gameli, a dedicated IT professional with a focus on developing and optimizing technology solutions. My expertise spans a range of disciplines, including system support, problem-solving, and technological innovation.</p>
                     
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="3">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="100">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="24">0</div>
+                            <div class="stat-label">Hours Support</div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-section">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-container">
+                            <div class="skill-category">
+                                <h4><i class="fas fa-code"></i> Frontend Development</h4>
+                                <ul>
+                                    <li>HTML5 & CSS3</li>
+                                    <li>JavaScript (ES6+)</li>
+                                    <li>Responsive Web Design</li>
+                                    <li>UI/UX Principles</li>
+                                    <li>Bootstrap/Tailwind</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4><i class="fas fa-tools"></i> Tools & Technologies</h4>
+                                <ul>
+                                    <li>Adobe XD (Prototyping)</li>
+                                    <li>Git & GitHub</li>
+                                    <li>CMS Development</li>
+                                    <li>Web Performance Optimization</li>
+                                    <li>VS Code</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4><i class="fas fa-user-tie"></i> Professional Skills</h4>
+                                <ul>
+                                    <li>Problem Solving</li>
+                                    <li>Project Management</li>
+                                    <li>Technical Support</li>
+                                    <li>Client Communication</li>
+                                    <li>Team Collaboration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="closing-statement">I am committed to leveraging my skills to address challenges and contribute to advancements in the technology field, always staying updated with the latest industry trends and best practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Portfolio</h2>
+                <p class="section-subtitle">Showcasing my recent work</p>
+            </div>
+            
+            <!-- Portfolio Filter -->
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="design">UI/UX Design</button>
+                <button class="filter-btn" data-filter="cms">CMS Projects</button>
+                <button class="filter-btn" data-filter="app">Applications</button>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="mygif2.gif" alt="Portfolio Introduction Animation" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="#" class="project-view"><i class="fas fa-expand"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Portfolio Introduction</h3>
+                            <span class="project-type">Design Overview</span>
+                        </div>
+                        <p>Welcome to my portfolio showcasing a blend of web projects and visual design creations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Adobe XD</span>
+                            <span class="tech-tag">UI Design</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="mygif1.gif" alt="Web Development Animation" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="#" class="project-view"><i class="fas fa-expand"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Modern Web Development</h3>
+                            <span class="project-type">Frontend</span>
+                        </div>
+                        <p>Crafting immersive digital experiences using HTML, CSS, and JavaScript.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Personal Portfolio Website</h3>
+                            <span class="project-type">HTML & CSS</span>
+                        </div>
+                        <p>Designed and developed a fully responsive personal portfolio website using modern web design principles.</p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Fully responsive design</li>
+                                <li>Modern UI/UX principles</li>
+                                <li>Cross-browser compatibility</li>
+                                <li>Performance optimized</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="img3.jpg" alt="Portfolio Design Mockup" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="#" class="project-view"><i class="fas fa-expand"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Creative Portfolio Design</h3>
+                            <span class="project-type">Visual Design</span>
+                        </div>
+                        <p>A Creative and Responsive Portfolio Website design that balances aesthetics with functionality.</p>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="mygif3.gif" alt="CSS Animation Showcase" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="#" class="project-view"><i class="fas fa-expand"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Advanced CSS Techniques</h3>
+                            <span class="project-type">CSS Styling</span>
+                        </div>
+                        <p>Implemented complex layouts with CSS animations, flexbox, and grid for responsive design.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">CSS Grid</span>
+                            <span class="tech-tag">Flexbox</span>
+                            <span class="tech-tag">Animations</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="mygif.gif" alt="Adobe XD Prototyping Process" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://xd.adobe.com/view/01ea1f96-8fad-452b-9647-8947b3f2def9-54b9/?fullscreen&hints=off" target="_blank" class="project-view"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>UI/UX Prototyping</h3>
+                            <span class="project-type">Adobe XD Design</span>
+                        </div>
+                        <p>Transforming concepts into tangible designs with precision using Adobe XD.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Adobe XD</span>
+                            <span class="tech-tag">Wireframing</span>
+                            <span class="tech-tag">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="project-card" data-category="cms">
+                    <div class="project-image">
+                        <img src="img2.jpg" alt="Grace Temple Church Website Screenshot" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://gracetemple.cw.center" target="_blank" class="project-view"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Grace Temple Church Website</h3>
+                            <span class="project-type">CMS Development</span>
+                        </div>
+                        <p>Comprehensive website for Grace Temple Church using a modern CMS platform.</p>
+                        <p class="project-link"><a href="https://gracetemple.cw.center" target="_blank">Live Website</a></p>
+                        <div class="project-tech">
+                            <span class="tech-tag">CMS</span>
+                            <span class="tech-tag">Responsive</span>
+                            <span class="tech-tag">Community</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="project-card" data-category="app">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Digital Business Card</h3>
+                            <span class="project-type">Web Application</span>
+                        </div>
+                        <p>Sleek digital business card with HTML and CSS showcasing professional contact details.</p>
+                        <p class="project-link"><a href="https://davidgameli.github.io/digital-business-card/" target="_blank">View Project</a></p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Personal Branding</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9 -->
+                <div class="project-card" data-category="app">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Cybersecurity Quiz App</h3>
+                            <span class="project-type">Interactive Web App</span>
+                        </div>
+                        <p>Interactive quiz application to test and improve cybersecurity knowledge.</p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Single-choice questions</li>
+                                <li>Instant feedback system</li>
+                                <li>Score tracking</li>
+                                <li>Mobile-responsive</li>
+                            </ul>
+                        </div>
+                        <p class="project-link"><a href="https://davidgameli.github.io/cybersecure-quiz/" target="_blank">Try the Quiz</a></p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Quiz</span>
+                            <span class="tech-tag">Cybersecurity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-cta">
+                <p>Interested in seeing more of my work?</p>
+                <a href="#contact" class="btn primary-btn">Let's Discuss Your Project</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm" action="https://formspree.io/f/mqkvlgop" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:davidgameli0@outlook.com">davidgameli0@outlook.com</a>
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Accra, Ghana</p>
+                            </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+233240095459">+233 24 009 5459</a>
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+233240095459">+233 24 009 5459</a></p>
+                            </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Accra, Ghana</span>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:davidgameli0@outlook.com">davidgameli0@outlook.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Open to new opportunities</p>
+                                <p class="small-text">Mon - Fri: 9am - 6pm</p>
+                            </div>
                         </div>
                     </div>
-
+                    
                     <div class="social-links">
-                        <a href="https://github.com/davidgameli" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/david-gameli" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
+                        <h4>Connect with me</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/davidgameli" target="_blank" class="social-icon github" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/david-gameli" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://twitter.com/davidgameli" target="_blank" class="social-icon twitter" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <form class="contact-form" action="https://formspree.io/f/mqkvlgop" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="copyright">
-                    &copy; 2025 David Atsu Gameli. All rights reserved.
+                <div class="footer-logo">
+                    <div class="logo">David Atsu Gameli</div>
+                    <p class="footer-tagline">Creating digital solutions that make a difference</p>
                 </div>
+                
                 <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#portfolio">Work</a>
-                    <a href="#contact">Contact</a>
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#portfolio">Web Development</a></li>
+                            <li><a href="#portfolio">UI/UX Design</a></li>
+                            <li><a href="#portfolio">CMS Development</a></li>
+                            <li><a href="#portfolio">Technical Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li><i class="fas fa-envelope"></i> davidgameli0@outlook.com</li>
+                            <li><i class="fas fa-phone"></i> +233 24 009 5459</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Accra, Ghana</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 David Atsu Gameli. All rights reserved.</p>
+                <p class="footer-note">Built with <i class="fas fa-heart"></i> using HTML, CSS, and JavaScript</p>
             </div>
         </div>
     </footer>
-
+    
     <script>
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
+        // Enhanced JavaScript for mobile navigation and interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const loading = document.getElementById('loading');
+            const scrollTop = document.getElementById('scrollTop');
+            const mobileToggle = document.getElementById('mobileToggle');
+            const mobileClose = document.getElementById('mobileClose');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const navMenu = document.getElementById('navMenu');
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+            const submitBtn = contactForm?.querySelector('.submit-btn');
+            const btnText = submitBtn?.querySelector('.btn-text');
+            const btnLoader = submitBtn?.querySelector('.btn-loader');
+            const statNumbers = document.querySelectorAll('.stat-number');
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
+            // Hide loading screen
+            setTimeout(() => {
+                loading.classList.add('hidden');
+            }, 1000);
+
+            // Scroll to top button
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    scrollTop.classList.add('visible');
+                } else {
+                    scrollTop.classList.remove('visible');
+                }
             });
-        });
 
-        // Form submission
-        const contactForm = document.querySelector('.contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.textContent;
-                
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-                
-                try {
-                    const formData = new FormData(contactForm);
-                    await fetch(contactForm.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
+            scrollTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Mobile menu toggle
+            function toggleMobileMenu() {
+                mobileMenu.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                mobileToggle.setAttribute('aria-expanded', 
+                    mobileMenu.classList.contains('active')
+                );
+                document.body.classList.toggle('no-scroll');
+            }
+
+            mobileToggle.addEventListener('click', toggleMobileMenu);
+            mobileClose.addEventListener('click', toggleMobileMenu);
+            mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+
+            // Close mobile menu when clicking on links
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Active navigation link based on scroll position
+            function setActiveNavLink() {
+                const sections = document.querySelectorAll('section');
+                const scrollPos = window.scrollY + 100;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', setActiveNavLink);
+
+            // Portfolio filtering
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
                         }
                     });
-                    
-                    alert('Message sent successfully!');
-                    contactForm.reset();
-                } catch (error) {
-                    alert('Error sending message. Please try again.');
-                } finally {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                }
+                });
             });
-        }
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const headerOffset = 80;
-                    const elementPosition = targetElement.offsetTop;
-                    const offsetPosition = elementPosition - headerOffset;
+            // Animate stats counter
+            function animateStats() {
+                statNumbers.forEach(stat => {
+                    const target = parseInt(stat.getAttribute('data-count'));
+                    const increment = target / 100;
+                    let current = 0;
                     
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Sticky navigation
-        const navbar = document.querySelector('.navbar');
-        let lastScrollTop = 0;
-
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > 100) {
-                navbar.classList.add('scrolled');
-                
-                if (scrollTop > lastScrollTop) {
-                    // Scrolling down
-                    navbar.style.transform = 'translateY(-100%)';
-                } else {
-                    // Scrolling up
-                    navbar.style.transform = 'translateY(0)';
-                }
-            } else {
-                navbar.classList.remove('scrolled');
-                navbar.style.transform = 'translateY(0)';
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            clearInterval(timer);
+                            current = target;
+                        }
+                        stat.textContent = Math.floor(current);
+                    }, 20);
+                });
             }
-            
-            lastScrollTop = scrollTop;
+
+            // Intersection Observer for stats animation
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                statsObserver.observe(aboutSection);
+            }
+
+            // Form submission
+            if (contactForm) {
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    
+                    if (submitBtn && btnText && btnLoader) {
+                        submitBtn.disabled = true;
+                        btnText.textContent = 'Sending...';
+                        btnLoader.style.display = 'block';
+                    }
+                    
+                    try {
+                        const formData = new FormData(contactForm);
+                        const response = await fetch(contactForm.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+                        
+                        if (response.ok) {
+                            formMessage.textContent = 'Message sent successfully!';
+                            formMessage.className = 'form-message success';
+                            contactForm.reset();
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    } catch (error) {
+                        formMessage.textContent = 'Oops! Something went wrong. Please try again.';
+                        formMessage.className = 'form-message error';
+                        console.error('Form error:', error);
+                    } finally {
+                        if (submitBtn && btnText && btnLoader) {
+                            submitBtn.disabled = false;
+                            btnText.textContent = 'Send Message';
+                            btnLoader.style.display = 'none';
+                        }
+                        
+                        setTimeout(() => {
+                            formMessage.textContent = '';
+                            formMessage.className = 'form-message';
+                        }, 5000);
+                    }
+                });
+            }
+
+            // Sticky navigation
+            const mainNav = document.getElementById('mainNav');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 100) {
+                    mainNav.classList.add('scrolled');
+                    
+                    // Hide/show navigation on scroll
+                    if (scrollTop > lastScrollTop && scrollTop > 200) {
+                        // Scrolling down
+                        mainNav.style.transform = 'translateY(-100%)';
+                    } else {
+                        // Scrolling up
+                        mainNav.style.transform = 'translateY(0)';
+                    }
+                } else {
+                    mainNav.classList.remove('scrolled');
+                    mainNav.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+
+            // Smooth scroll for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.offsetTop;
+                        const offsetPosition = elementPosition - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Initialize tooltips
+            document.querySelectorAll('[title]').forEach(element => {
+                element.addEventListener('mouseenter', (e) => {
+                    const tooltip = document.createElement('div');
+                    tooltip.className = 'tooltip';
+                    tooltip.textContent = e.target.getAttribute('title');
+                    document.body.appendChild(tooltip);
+                    
+                    const rect = e.target.getBoundingClientRect();
+                    tooltip.style.left = `${rect.left + rect.width / 2}px`;
+                    tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
+                    
+                    e.target._tooltip = tooltip;
+                });
+                
+                element.addEventListener('mouseleave', (e) => {
+                    if (e.target._tooltip) {
+                        e.target._tooltip.remove();
+                        delete e.target._tooltip;
+                    }
+                });
+            });
         });
     </script>
 </body>
